@@ -17,21 +17,21 @@ import kotlinx.android.synthetic.main.activity_borrowlist_user.*
 import org.json.JSONArray
 
 class MainHistory : AppCompatActivity() {
-     private var btndetail: Button? = null
-     val TAG = "SERVICE_ST"
-     var List = ArrayList<MainHis>()
+    private var btndetail: Button? = null
+    val TAG = "SERVICE_ST"
+    var List = ArrayList<MainHis>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_history)
 
-        btndetail = findViewById(R.id.btndetail) as Button
-
-        btndetail!!.setOnClickListener {
-            val intent = Intent(this, Detail::class.java)
-            startActivity(intent)
-
-        }
+//        btndetail = findViewById(R.id.btndetail) as Button
+//
+//        btndetail!!.setOnClickListener {
+//            val intent = Intent(this, Detail::class.java)
+//            startActivity(intent)
+//
+//        }
         val textView = findViewById<TextView>(R.id.item)
         val cache = DiskBasedCache(cacheDir, 1024 * 1024) // 1MB cap
         val network = BasicNetwork(HurlStack())
@@ -60,7 +60,7 @@ class MainHistory : AppCompatActivity() {
                 }
 
                 item_list.layoutManager = LinearLayoutManager(this)
-                item_list.adapter = RecycleAdapter(this, List)
+                item_list.adapter = MainHistoryAdapter(this, List)
             },
 
             Response.ErrorListener { textView.text ="not work" }
