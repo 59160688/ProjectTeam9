@@ -23,7 +23,7 @@ class MainHistoryAdapter(val context: Context,
         return HisHolder(LayoutInflater.from(context).inflate(R.layout.item_main_his, parent, false))
     }
 
-    override fun onBindViewHolder(p0: HisHolder, p1: Int) {
+    override fun onBindViewHolder(p0: HisHolder, p1: Int){
         p0.br_no .text = items[p1].br_no
         p0.ps_name .text = items[p1].ps_fname+" "+items[p1].ps_lname
         p0.br_date .text = items[p1].br_date.take(10)+"  ถึง "
