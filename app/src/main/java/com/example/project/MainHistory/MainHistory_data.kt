@@ -6,5 +6,7 @@ class MainHis (
     var ps_lname :String,
     var br_date :String,
     var br_check_date :String,
-    var brst_name :String
+    var brst_name :String,
+    var eqs_code_old : String,
+    var eqs_name :String
 )

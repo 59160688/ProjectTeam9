@@ -25,13 +25,7 @@ class MainHistory : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_history)
 
-//        btndetail = findViewById(R.id.btndetail) as Button
-//
-//        btndetail!!.setOnClickListener {
-//            val intent = Intent(this, Detail::class.java)
-//            startActivity(intent)
-//
-//        }
+
         val textView = findViewById<TextView>(R.id.item)
         val cache = DiskBasedCache(cacheDir, 1024 * 1024) // 1MB cap
         val network = BasicNetwork(HurlStack())
@@ -39,7 +33,7 @@ class MainHistory : AppCompatActivity() {
             start()
         }
 
-        val url = "http://10.80.84.85:8218/get_all"
+        val url = "http://10.80.83.17:8218/get_all"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String>
@@ -55,7 +49,9 @@ class MainHistory : AppCompatActivity() {
                         json.getJSONObject(it).getString("ps_lname"),
                         json.getJSONObject(it).getString("br_date"),
                         json.getJSONObject(it).getString("br_check_date"),
-                        json.getJSONObject(it).getString("brst_name"))
+                        json.getJSONObject(it).getString("brst_name"),
+                        json.getJSONObject(it).getString("eqs_code_old"),
+                        json.getJSONObject(it).getString("eqs_name"))
 
                 }
 
