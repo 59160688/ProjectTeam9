@@ -20,7 +20,7 @@ class MainHistoryAdapter(val context: Context,
     // Inflates the item views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HisHolder {
         //var mView = LayoutInflater.from(context).inflate(R.layout.item, parent, false)
-        return HisHolder(LayoutInflater.from(context).inflate(R.layout.item_borrow_list, parent, false))
+        return HisHolder(LayoutInflater.from(context).inflate(R.layout.item_main_his, parent, false))
     }
 
     override fun onBindViewHolder(p0: HisHolder, p1: Int) {
