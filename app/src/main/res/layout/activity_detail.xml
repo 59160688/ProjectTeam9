@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp"
+            android:background="#EAEAEA  "
+    >
+
+        <TextView
+                android:text="เลขที่ใบยืม"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id"
+                android:textSize="24dp"
+                android:layout_marginLeft="5dp"
+        />
+        <TextView
+                android:text="xx"
+                android:textColor="#C0B9B9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_ans"
+                android:layout_toRightOf="@id/id"
+                android:layout_marginLeft="92dp"
+                android:textSize="24dp"
+        />
+
+        <TextView
+                android:text="ชื่อผู้ยืม"
+                android:textColor="#000000"
+                android:layout_below="@id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name"
+                android:textSize="24dp"
+        />
+        <TextView
+                android:text="xxxxxx xxxxxxx"
+                android:textColor="#C0B9B9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_ans"
+                android:layout_toRightOf="@id/name"
+                android:layout_marginLeft="76dp"
+                android:textSize="24dp"
+                android:layout_marginTop="35dp"
+
+        />
+        <TextView
+                android:text="วันที่ยืม "
+                android:textColor="#000000"
+                android:layout_below="@id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_borrow"
+                android:textSize="24dp"
+                android:layout_marginLeft="5dp"/>
+        <TextView
+                android:text="xx / xx / xxxx"
+                android:textColor="#C0B9B9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_borrow_ans"
+                android:layout_toRightOf="@id/date_borrow"
+                android:layout_marginLeft="69dp"
+                android:textSize="24dp"
+                android:layout_marginTop="65dp"
+
+        />
+        <TextView
+                android:text="วันที่ยืม "
+                android:textColor="#000000"
+                android:layout_below="@id/date_borrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_return"
+                android:textSize="24dp"
+                android:layout_marginLeft="5dp"/>
+        <TextView
+                android:text="xx / xx / xxxx"
+                android:textColor="#C0B9B9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_return_ans"
+                android:layout_toRightOf="@id/date_return"
+                android:layout_marginLeft="68dp"
+                android:textSize="24dp"
+                android:layout_marginTop="95dp"
+
+        />
+        <TextView
+                android:text="สถานะ"
+                android:textColor="#000000"
+                android:layout_below="@id/date_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/status"
+                android:textSize="24dp"
+                android:layout_marginLeft="5dp"/>
+        <TextView
+                android:text="xxxxxx"
+                android:textColor="#C0B9B9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/status_ans"
+                android:layout_toRightOf="@id/status"
+                android:layout_marginLeft="79dp"
+                android:textSize="24dp"
+                android:layout_marginTop="130dp"
+
+        />
+
+        <TextView
+                android:text="ครุภัณฑ์ที่ขอใช้"
+                android:textColor="#000000"
+                android:layout_below="@id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/AstBrw"
+                android:textSize="24dp"
+                android:layout_marginLeft="5dp"/>
+
+        <TextView
+                android:text="xxxxx"
+                android:textColor="#C0B9B9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/AstBrw_ans"
+                android:layout_toRightOf="@id/AstBrw"
+                android:layout_marginLeft="26dp"
+                android:textSize="24dp"
+                android:layout_marginTop="160dp"
+
+        />
+        <TextView
+                android:text="เลขที่ครุภัณฑ์"
+                android:textColor="#000000"
+                android:layout_below="@id/AstBrw"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/AstId"
+                android:textSize="24dp"
+                android:layout_marginLeft="5dp"/>
+        <TextView
+                android:text="xxxxxx"
+                android:textColor="#C0B9B9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/AstId_ans"
+                android:layout_toRightOf="@id/AstId"
+                android:layout_marginLeft="44dp"
+                android:textSize="24dp"
+                android:layout_marginTop="195dp"
+
+        />
+        <TextView
+                android:text="ชื่อครุภัณฑ์"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Astname"
+                android:textSize="24dp"
+                android:textColor="#000000"
+                android:layout_below="@id/AstId"
+
+        />
+        <TextView
+                android:text="xxxxxx"
+                android:textColor="#C0B9B9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Astname_ans"
+                android:layout_toRightOf="@id/AstBrw"
+                android:layout_marginLeft="26dp"
+                android:textSize="24dp"
+                android:layout_marginTop="225dp"
+
+        />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

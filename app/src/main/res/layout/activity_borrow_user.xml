@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Borrow">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="16dp"
+            tools:layout_editor_absoluteX="0dp">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:background="#EAEAEA  "
+
+                android:layout_height="80dp">
+            <TextView
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="*ชื่อผู้ขอ"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_Name"
+                    android:textSize="20dp"
+                    android:layout_marginRight="10dp"/>
+            <EditText
+                    android:background="@android:color/white"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/textView_Name"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/editText_Name"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_alignBottom="@+id/layout1"
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#EAEAEA  "
+                android:layout_marginBottom="-83dp">
+            <TextView
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="*วันที่ขอ"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_Date"
+                    android:textSize="20dp"
+                    android:layout_marginRight="10dp"/>
+
+            <EditText
+                    android:background="@android:color/white"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/editText_Date"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_alignBottom="@+id/layout2"
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#EAEAEA  "
+                android:layout_marginBottom="-83dp">
+            <TextView
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="*วันที่คืน"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_DateReturn"
+                    android:textSize="20dp"
+                    android:layout_marginRight="10dp"/>
+
+            <EditText
+                    android:background="@android:color/white"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:id="@+id/editText_DateReturn"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_alignBottom="@+id/layout3"
+                android:id="@+id/layout4"
+                android:layout_width="match_parent"
+                android:layout_height="137dp"
+                android:background="#EAEAEA  "
+                android:layout_marginBottom="-141dp">
+            <TextView
+                    android:textColor="@android:color/black"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:text="*หมายเหตุ"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_Comment"
+                    android:textSize="20dp"
+                    android:layout_marginRight="10dp"/>
+
+            <EditText
+                    android:background="@android:color/white"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="270dp"
+                    android:layout_height="94dp"
+                    android:inputType="textPersonName"
+                    android:id="@+id/editText_Comment"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_alignBottom="@+id/layout4"
+                android:id="@+id/layout5"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="-220dp">
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <Button
+            android:id="@+id/btnchooseformat"
+            android:text="เลือกครุภัณฑ์"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:background="#008577"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+    />
+</android.support.constraint.ConstraintLayout>
