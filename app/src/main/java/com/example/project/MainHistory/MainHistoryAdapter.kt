@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import kotlinx.android.synthetic.main.item_borrow_list.view.*
 
 class MainHistoryAdapter(val context: Context,
@@ -14,13 +15,29 @@ class MainHistoryAdapter(val context: Context,
 ) : RecyclerView.Adapter<HisHolder>()
 {
     // Gets the number of animals in the list
+    private var btndetail: Button? = null
     override fun getItemCount(): Int {
         return items.size
     }
     // Inflates the item views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HisHolder {
-        //var mView = LayoutInflater.from(context).inflate(R.layout.item, parent, false)
-        return HisHolder(LayoutInflater.from(context).inflate(R.layout.item_main_his, parent, false))
+        var mView = LayoutInflater.from(context).inflate(R.layout.item_main_his, parent, false)
+        var btn = mView.btndetail
+        var mViewHolder = HisHolder(mView)
+        btn.setOnClickListener {
+            //var text = "Click Item " + dataSource[mViewHolder.layoutPosition].title_name
+            //Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+           //val recipeList = Recipe.getRecipesFromFile("books.json", context)
+            var selectItem = mViewHolder.layoutPosition
+            //   Toast.makeText(context,selectItem.title,Toast.LENGTH_SHORT).show()
+            var intent_Detail =  Intent(context,Detail::class.java)
+            intent_Detail.putExtra("br_no",items[selectItem].br_no)
+            intent_Detail.putExtra("ps_fname",items[selectItem].ps_fname)
+            intent_Detail.putExtra("ps_lname",items[selectItem].ps_lname)
+            intent_Detail.putExtra("br_date",items[selectItem].br_date)
+            context.startActivity(intent_Detail)
+        }
+        return mViewHolder//HisHolder(LayoutInflater.from(context).inflate(R.layout.item_main_his, parent, false))
     }
 
     override fun onBindViewHolder(p0: HisHolder, p1: Int){
@@ -31,6 +48,7 @@ class MainHistoryAdapter(val context: Context,
         p0.brst_name .text = items[p1].brst_name
 
     }
+
 }
 
 class HisHolder (view: View) : RecyclerView.ViewHolder(view) {
