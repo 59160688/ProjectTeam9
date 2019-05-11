@@ -28,13 +28,13 @@ class MainHistoryAdapter(val context: Context,
             //var text = "Click Item " + dataSource[mViewHolder.layoutPosition].title_name
             //Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
            //val recipeList = Recipe.getRecipesFromFile("books.json", context)
-            //var selectItem = recipeList[mViewHolder.layoutPosition]
+            var selectItem = mViewHolder.layoutPosition
             //   Toast.makeText(context,selectItem.title,Toast.LENGTH_SHORT).show()
             var intent_Detail =  Intent(context,Detail::class.java)
-            intent_Detail.putExtra("br_no",items[viewType].br_no)
-            intent_Detail.putExtra("ps_fname",items[viewType].ps_fname)
-            intent_Detail.putExtra("ps_lname",items[viewType].ps_lname)
-            intent_Detail.putExtra("br_date",items[viewType].br_date)
+            intent_Detail.putExtra("br_no",items[selectItem].br_no)
+            intent_Detail.putExtra("ps_fname",items[selectItem].ps_fname)
+            intent_Detail.putExtra("ps_lname",items[selectItem].ps_lname)
+            intent_Detail.putExtra("br_date",items[selectItem].br_date)
             context.startActivity(intent_Detail)
         }
         return mViewHolder//HisHolder(LayoutInflater.from(context).inflate(R.layout.item_main_his, parent, false))
