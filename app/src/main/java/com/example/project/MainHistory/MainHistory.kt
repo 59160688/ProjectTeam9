@@ -17,9 +17,9 @@ import kotlinx.android.synthetic.main.activity_borrowlist_user.*
 import org.json.JSONArray
 
 class MainHistory : AppCompatActivity() {
-     private var btndetail: Button? = null
-     val TAG = "SERVICE_ST"
-     var List = ArrayList<MainHis>()
+    private var btndetail: Button? = null
+    val TAG = "SERVICE_ST"
+    var List = ArrayList<MainHis>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +60,7 @@ class MainHistory : AppCompatActivity() {
                 }
 
                 item_list.layoutManager = LinearLayoutManager(this)
-                item_list.adapter = RecycleAdapter(this, List)
+                item_list.adapter = MainHistoryAdapter(this, List)
             },
 
             Response.ErrorListener { textView.text ="not work" }
