@@ -25,13 +25,13 @@ class MainHistory : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_history)
 
-        btndetail = findViewById(R.id.btndetail) as Button
-
-        btndetail!!.setOnClickListener {
-            val intent = Intent(this, Detail::class.java)
-            startActivity(intent)
-
-        }
+//        btndetail = findViewById(R.id.btndetail) as Button
+//
+//        btndetail!!.setOnClickListener {
+//            val intent = Intent(this, Detail::class.java)
+//            startActivity(intent)
+//
+//        }
         val textView = findViewById<TextView>(R.id.item)
         val cache = DiskBasedCache(cacheDir, 1024 * 1024) // 1MB cap
         val network = BasicNetwork(HurlStack())

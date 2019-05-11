@@ -41,8 +41,7 @@
                         android:id="@+id/textView8"
                         android:layout_weight="1"/>
                 <TextView
-                        android:text="xxxxx xxxxx"
-                        android:layout_width="wrap_content"
+                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:id="@+id/textView9"
                         android:layout_weight="1"
@@ -65,15 +64,13 @@
                         android:textSize="20sp"
                         android:layout_weight="1"/>
                 <TextView
-                        android:text="xx-xx-xxxx  -"
-                        android:layout_width="wrap_content"
+                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView4"
                         android:textSize="20sp"
                         android:layout_weight="1"/>
                 <TextView
-                        android:text="xx-xx-xxxx "
-                        android:layout_width="wrap_content"
+                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView5"
                         android:textSize="20sp"
@@ -94,8 +91,7 @@
                         android:id="@+id/textView11"
                         android:layout_weight="1"/>
                 <TextView
-                        android:text="xxxx"
-                        android:layout_width="wrap_content"
+                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:id="@+id/textView12"
