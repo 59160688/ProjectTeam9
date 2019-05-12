@@ -24,7 +24,7 @@
         />
         <TextView
                 android:text="xx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/id_ans"
@@ -44,7 +44,7 @@
         />
         <TextView
                 android:text="xxxxxx xxxxxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/name_ans"
@@ -65,7 +65,7 @@
                 android:layout_marginLeft="5dp"/>
         <TextView
                 android:text="xx / xx / xxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/date_borrow_ans"
@@ -86,7 +86,7 @@
                 android:layout_marginLeft="5dp"/>
         <TextView
                 android:text="xx / xx / xxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/date_return_ans"
@@ -107,7 +107,7 @@
                 android:layout_marginLeft="5dp"/>
         <TextView
                 android:text="xxxxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/status_ans"
@@ -130,7 +130,7 @@
 
         <TextView
                 android:text="xxxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/AstBrw_ans"
@@ -152,7 +152,7 @@
                 android:layout_marginLeft="5dp"/>
         <TextView
                 android:text="xxxxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/AstId_ans"
@@ -174,7 +174,7 @@
         />
         <TextView
                 android:text="xxxxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/Astname_ans"
