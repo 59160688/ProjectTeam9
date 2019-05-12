@@ -35,6 +35,11 @@ class MainHistoryAdapter(val context: Context,
             intent_Detail.putExtra("ps_fname",items[selectItem].ps_fname)
             intent_Detail.putExtra("ps_lname",items[selectItem].ps_lname)
             intent_Detail.putExtra("br_date",items[selectItem].br_date)
+            intent_Detail.putExtra("br_check_date",items[selectItem].br_check_date)
+            intent_Detail.putExtra("eqs_code_old",items[selectItem].eqs_code_old)
+            intent_Detail.putExtra("eqs_name",items[selectItem].eqs_name)
+            intent_Detail.putExtra("brst_name",items[selectItem].brst_name)
+
             context.startActivity(intent_Detail)
         }
         return mViewHolder//HisHolder(LayoutInflater.from(context).inflate(R.layout.item_main_his, parent, false))
