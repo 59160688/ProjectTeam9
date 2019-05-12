@@ -37,7 +37,6 @@ class Detail : AppCompatActivity() {
         var ps_lname = intent.getStringExtra("ps_lname")
         br_no!!.setText(intent.getStringExtra("br_no"))
         ps_fname!!.setText(intent.getStringExtra("ps_fname")+" "+ps_lname)
-
         brst_name!!.setText(intent.getStringExtra("brst_name"))
         eqs_name!!.setText(intent.getStringExtra("eqs_name"))
         eqs_code_old!!.setText(intent.getStringExtra("eqs_code_old"))
