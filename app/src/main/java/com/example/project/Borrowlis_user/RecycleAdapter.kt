@@ -39,9 +39,6 @@ class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     val br_check_date = view.textView5
     val br_date = view.textView4
     val brst_name = view.textView12
-   // val btndetail = view.btndetail
+    // val btndetail = view.btndetail
 
 }
-
-
-
