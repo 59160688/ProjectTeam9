@@ -22,20 +22,28 @@ class ChooseformatUserAdapter(val context: Context,
     }
     // Inflates the item views
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ChooseformatUserHolder {
-        
+
         var mView = LayoutInflater.from(context).inflate(R.layout.activity_chooseformat_user, parent, false)
-        var btn_return = mView.btnreturn
         var mViewHolder = ChooseformatUserHolder(mView)
-//        btn_return.setOnClickListener {
-//
+        mView.setOnClickListener {
+            //var text = "Click Item " + dataSource[mViewHolder.layoutPosition].title_name
+            //Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+            //val recipeList = Recipe.getRecipesFromFile("books.json", context)
 //            var selectItem = mViewHolder.layoutPosition
-//            var intent_Return = Intent(context, Return::class.java)
-//            intent_Return.putExtra("fmst_name", items[selectItem].fmst_name)
-//
-//
-//            context.startActivity(intent_Return)
-//        }
-        return mViewHolder
+            //   Toast.makeText(context,selectItem.title,Toast.LENGTH_SHORT).show()
+            var intent_Detail =  Intent(context,Chooseasset::class.java)
+//            intent_Detail.putExtra("br_no",items[selectItem].br_no)
+//            intent_Detail.putExtra("ps_fname",items[selectItem].ps_fname)
+//            intent_Detail.putExtra("ps_lname",items[selectItem].ps_lname)
+//            intent_Detail.putExtra("br_date",items[selectItem].br_date)
+//            intent_Detail.putExtra("br_check_date",items[selectItem].br_check_date)
+//            intent_Detail.putExtra("eqs_code_old",items[selectItem].eqs_code_old)
+//            intent_Detail.putExtra("eqs_name",items[selectItem].eqs_name)
+//            intent_Detail.putExtra("brst_name",items[selectItem].brst_name)
+
+            context.startActivity(intent_Detail)
+        }
+        return mViewHolder//HisHolder(LayoutInflater.from(context).inflate(R.layout.item_main_his, parent, false))
     }
 
     override fun onBindViewHolder(p0: ChooseformatUserHolder, p1: Int) {

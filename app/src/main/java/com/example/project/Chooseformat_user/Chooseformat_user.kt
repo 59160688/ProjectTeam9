@@ -43,7 +43,6 @@ class Chooseformat_user : AppCompatActivity() {
                 (0 until json.length()).mapTo(List) {
                     Chooseformat_user_data(
                         json.getJSONObject(it).getString("fmst_name"))
-
                 }
 
                 item_list.layoutManager = LinearLayoutManager(this)
