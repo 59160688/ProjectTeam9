@@ -40,7 +40,7 @@ class Borrowlist_user : AppCompatActivity() {
             start()
         }
 
-        val url = "http://10.80.84.85:8218/gbl"
+        val url = "http://10.70.20.169/gbl"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String>
