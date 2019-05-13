@@ -115,7 +115,7 @@
                         android:text="ดูข้อมูล"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/btndetail"
+                        android:id="@+id/btn_detail"
                         android:layout_weight="1"
                         android:background="#3F51B5"/>
                 <Button

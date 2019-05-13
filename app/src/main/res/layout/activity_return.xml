@@ -4,12 +4,12 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        android:layout_height="wrap_content"
+        tools:context=".Return">
     <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-             tools:layout_editor_absoluteX="16dp"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp"
             android:background="#EAEAEA  "
     >
 
@@ -24,7 +24,7 @@
         />
         <TextView
                 android:text="xx"
-                android:textColor="#C0B9B9"
+                android:textColor="#3F51B5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/id_ans"
@@ -44,12 +44,12 @@
         />
         <TextView
                 android:text="xxxxxx xxxxxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/name_ans"
                 android:layout_toRightOf="@id/name"
-                android:layout_marginLeft="76dp"
+                android:layout_marginLeft="48dp"
                 android:textSize="24dp"
                 android:layout_marginTop="35dp"
 
@@ -65,12 +65,12 @@
                 android:layout_marginLeft="5dp"/>
         <TextView
                 android:text="xx / xx / xxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/date_borrow_ans"
                 android:layout_toRightOf="@id/date_borrow"
-                android:layout_marginLeft="69dp"
+                android:layout_marginLeft="40dp"
                 android:textSize="24dp"
                 android:layout_marginTop="65dp"
 
@@ -86,12 +86,12 @@
                 android:layout_marginLeft="5dp"/>
         <TextView
                 android:text="xx / xx / xxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/date_return_ans"
                 android:layout_toRightOf="@id/date_return"
-                android:layout_marginLeft="68dp"
+                android:layout_marginLeft="39dp"
                 android:textSize="24dp"
                 android:layout_marginTop="95dp"
 
@@ -107,12 +107,12 @@
                 android:layout_marginLeft="5dp"/>
         <TextView
                 android:text="xxxxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/status_ans"
                 android:layout_toRightOf="@id/status"
-                android:layout_marginLeft="79dp"
+                android:layout_marginLeft="49dp"
                 android:textSize="24dp"
                 android:layout_marginTop="130dp"
 
@@ -120,7 +120,7 @@
 
         <TextView
                 android:text="ครุภัณฑ์ที่ขอใช้"
-                android:textColor="#000000"
+                android:textColor="#3F51B5"
                 android:layout_below="@id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -129,8 +129,7 @@
                 android:layout_marginLeft="5dp"/>
 
         <TextView
-                android:text="xxxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/AstBrw_ans"
@@ -151,13 +150,12 @@
                 android:textSize="24dp"
                 android:layout_marginLeft="5dp"/>
         <TextView
-                android:text="xxxxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:id="@+id/AstId_ans"
                 android:layout_toRightOf="@id/AstId"
-                android:layout_marginLeft="44dp"
+                android:layout_marginLeft="4dp"
                 android:textSize="24dp"
                 android:layout_marginTop="195dp"
 
@@ -170,31 +168,32 @@
                 android:textSize="24dp"
                 android:textColor="#000000"
                 android:layout_below="@id/AstId"
-
+                android:layout_marginTop="5dp"
+                android:layout_alignEnd="@+id/id"
         />
         <TextView
-                android:text="xxxxxx"
-                android:textColor="#C0B9B9"
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/Astname_ans"
                 android:layout_toRightOf="@id/AstBrw"
-                android:layout_marginLeft="26dp"
+                android:layout_marginLeft="0dp"
                 android:textSize="24dp"
-                android:layout_marginTop="225dp"
+
+                android:layout_marginTop="230dp"
 
         />
-    </RelativeLayout>
 
-    <Button
-            android:text="อนุมัติการคืน"
-            android:textColor="#FFFFFF"
-            android:background="#4CAF50"
-            android:textSize="24sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:id="@+id/btnapprove"
-            tools:layout_editor_absoluteY="553dp"
-            tools:layout_editor_absoluteX="0dp"/>
- </android.support.constraint.ConstraintLayout>
+        <Button
+                android:text="อนุมัติการคืน"
+                android:textColor="#FFFFFF"
+                android:background="#4CAF50"
+                android:textSize="24sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btnapprove"
+                tools:layout_editor_absoluteY="553dp"
+                tools:layout_editor_absoluteX="0dp"/>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
