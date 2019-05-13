@@ -1,10 +1,17 @@
 package com.example.project
 
+import android.app.DownloadManager
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
+import org.json.JSONObject
 
 class Approve : AppCompatActivity() {
     private var btnapprove: Button? = null
@@ -17,17 +24,20 @@ class Approve : AppCompatActivity() {
     private var br_date : TextView? = null
     private var br_check_date : TextView? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_approve)
         btnapprove = findViewById(R.id.btnapprove) as Button
         btnapprove!!.setOnClickListener {
+            update()
             val intent = Intent(this, Borrowlist::class.java)
             startActivity(intent)
 
         }
         btn_notapprove = findViewById(R.id.btnnotapprove) as Button
         btn_notapprove!!.setOnClickListener {
+
             val intent = Intent(this, NotApprove::class.java)
             startActivity(intent)
 
@@ -53,4 +63,38 @@ class Approve : AppCompatActivity() {
         br_check_date!!.setText(intent.getStringExtra("br_check_date"))
 
     }
+    fun insert(){
+        val url = "http://10.80.84.85:8218/update_borrow_approve"
+        val jsonBody = JSONObject()
+        //jsonBody.put("")
+        // Request a string response from the provided URL.
+        val stringRequest = JsonObjectRequest(
+            Request.Method.POST, url,jsonBody,
+            Response.Listener<JSONObject> { response ->
+                //val accounting = JSONArray(response)
+
+            },
+            Response.ErrorListener {
+                    response-> Toast.makeText(this, "${response}", Toast.LENGTH_SHORT).show()
+            }
+        )
+    }
+
+    fun update(){
+        val url = "http://10.80.84.85:8218/update_borrow_approve"
+        val jsonBody = JSONObject()
+        jsonBody.put("br_id",br_no)
+        // Request a string response from the provided URL.
+        val stringRequest = JsonObjectRequest(
+            Request.Method.PUT, url,jsonBody,
+            Response.Listener<JSONObject> { response ->
+                //val accounting = JSONArray(response)
+
+            },
+            Response.ErrorListener {
+                    response-> Toast.makeText(this, "${response}", Toast.LENGTH_SHORT).show()
+            }
+        )
+    }
+
 }
