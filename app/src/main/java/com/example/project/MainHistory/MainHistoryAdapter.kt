@@ -11,7 +11,7 @@ import android.widget.Button
 import kotlinx.android.synthetic.main.item_borrow_list.view.*
 
 class MainHistoryAdapter(val context: Context,
-                     val items : ArrayList<MainHis>
+                         val items : ArrayList<MainHis>
 ) : RecyclerView.Adapter<HisHolder>()
 {
     // Gets the number of animals in the list
@@ -27,7 +27,7 @@ class MainHistoryAdapter(val context: Context,
         btn.setOnClickListener {
             //var text = "Click Item " + dataSource[mViewHolder.layoutPosition].title_name
             //Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
-           //val recipeList = Recipe.getRecipesFromFile("books.json", context)
+            //val recipeList = Recipe.getRecipesFromFile("books.json", context)
             var selectItem = mViewHolder.layoutPosition
             //   Toast.makeText(context,selectItem.title,Toast.LENGTH_SHORT).show()
             var intent_Detail =  Intent(context,Detail::class.java)
@@ -45,7 +45,7 @@ class MainHistoryAdapter(val context: Context,
         return mViewHolder//HisHolder(LayoutInflater.from(context).inflate(R.layout.item_main_his, parent, false))
     }
 
-    override fun onBindViewHolder(p0: HisHolder, p1: Int){
+    override fun onBindViewHolder(p0: HisHolder, p1: Int) {
         p0.br_no .text = items[p1].br_no
         p0.ps_name .text = items[p1].ps_fname+" "+items[p1].ps_lname
         p0.br_date .text = items[p1].br_date.take(10)+"  ถึง "
@@ -65,6 +65,7 @@ class HisHolder (view: View) : RecyclerView.ViewHolder(view) {
     // val btndetail = view.btndetail
 
 }
+
 
 
 

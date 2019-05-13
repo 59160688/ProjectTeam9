@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_borrowlist_user.*
 import org.json.JSONArray
 
 class Borrowlist_user : AppCompatActivity() {
-   // private var gotoborrow: Button? = null
+    // private var gotoborrow: Button? = null
     private var btndetail: Button? = null
 
     val TAG = "SERVICE_ST"
@@ -40,7 +40,7 @@ class Borrowlist_user : AppCompatActivity() {
             start()
         }
 
-        val url = "http://10.70.20.169/gbl"
+        val url = "http://10.80.84.85:8218/gbl"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String>
@@ -61,7 +61,7 @@ class Borrowlist_user : AppCompatActivity() {
                 }
 
                 item_list.layoutManager = LinearLayoutManager(this)
-               item_list.adapter = RecycleAdapter(this, List)
+                item_list.adapter = RecycleAdapter(this, List)
             },
 
             Response.ErrorListener { textView.text ="not work" }
