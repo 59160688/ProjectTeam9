@@ -8,12 +8,14 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.android.volley.Request
+import com.android.volley.RequestQueue
 import com.android.volley.Response
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
+import com.android.volley.toolbox.*
 import org.json.JSONObject
 
 class Approve : AppCompatActivity() {
+
+    private var requestQueue: RequestQueue? = null
     private var btnapprove: Button? = null
     private var btn_notapprove: Button? = null
     private var br_no: TextView? = null
@@ -28,9 +30,19 @@ class Approve : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_approve)
+
+        val cache =DiskBasedCache(cacheDir,1024 * 1024)
+        val network =BasicNetwork(HurlStack())
+
+        requestQueue = RequestQueue(cache,network).apply {
+            start()
+        }
+
+        requestQueue = Volley.newRequestQueue(this)
+
         btnapprove = findViewById(R.id.btnapprove) as Button
         btnapprove!!.setOnClickListener {
-            update()
+
             val intent = Intent(this, Borrowlist::class.java)
             startActivity(intent)
 
@@ -63,22 +75,6 @@ class Approve : AppCompatActivity() {
         br_check_date!!.setText(intent.getStringExtra("br_check_date"))
 
     }
-    fun insert(){
-        val url = "http://10.80.84.85:8218/update_borrow_approve"
-        val jsonBody = JSONObject()
-        //jsonBody.put("")
-        // Request a string response from the provided URL.
-        val stringRequest = JsonObjectRequest(
-            Request.Method.POST, url,jsonBody,
-            Response.Listener<JSONObject> { response ->
-                //val accounting = JSONArray(response)
-
-            },
-            Response.ErrorListener {
-                    response-> Toast.makeText(this, "${response}", Toast.LENGTH_SHORT).show()
-            }
-        )
-    }
 
     fun update(){
         val url = "http://10.80.84.85:8218/update_borrow_approve"
@@ -95,6 +91,8 @@ class Approve : AppCompatActivity() {
                     response-> Toast.makeText(this, "${response}", Toast.LENGTH_SHORT).show()
             }
         )
+        requestQueue?.add(stringRequest)
     }
+
 
 }

@@ -69,7 +69,7 @@ class Borrowlist : AppCompatActivity() {
             start()
         }
 
-        val url = "http://10.80.84.85:8218/get_all"
+        val url = "http://10.80.77.146:8218/getall"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String>
