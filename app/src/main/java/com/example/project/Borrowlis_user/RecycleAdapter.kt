@@ -26,8 +26,8 @@ class RecycleAdapter(val context: Context,
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
         p0.br_no .text = items[p1].br_no
         p0.ps_name .text = items[p1].ps_fname+" "+items[p1].ps_lname
-        p0.br_date .text = items[p1].br_date.take(10)+"  ถึง "
-        p0.br_check_date .text = items[p1].br_check_date.take(10)
+        p0.br_date .text = items[p1].br_date.take(10)
+        p0.checkdate .text = items[p1].br_check_date.take(10)
         p0.brst_name .text = items[p1].brst_name
 
     }
@@ -36,7 +36,7 @@ class RecycleAdapter(val context: Context,
 class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     val br_no = view.textView7
     val ps_name = view.textView9
-    val br_check_date = view.textView5
+    val checkdate = view.checkdate
     val br_date = view.textView4
     val brst_name = view.textView12
     // val btndetail = view.btndetail

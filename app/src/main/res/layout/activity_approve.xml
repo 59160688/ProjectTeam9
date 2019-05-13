@@ -13,6 +13,7 @@
             android:background="#EAEAEA  "
     >
 
+
         <TextView
                 android:text="เลขที่ใบยืม"
                 android:textColor="#000000"
@@ -76,7 +77,7 @@
 
         />
         <TextView
-                android:text="วันที่ยืม "
+                android:text="วันที่คืน "
                 android:textColor="#000000"
                 android:layout_below="@id/date_borrow"
                 android:layout_width="wrap_content"
@@ -168,21 +169,24 @@
                 android:textSize="24dp"
                 android:textColor="#000000"
                 android:layout_below="@id/AstId"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="36dp"
                 android:layout_alignEnd="@+id/id"
-        />
+                android:layout_marginEnd="0dp"/>
         <TextView
+                android:text="ชื่อครุภัณฑ์"
+
                 android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/Astname_ans"
                 android:layout_toRightOf="@id/AstBrw"
-                android:layout_marginLeft="0dp"
+                android:layout_marginLeft="-4dp"
                 android:textSize="24dp"
 
-                android:layout_marginTop="230dp"
+                android:layout_marginTop="265dp"
 
         />
+
         <Button
                 android:text="อนุมัติการ"
                 android:textColor="#FFFFFF"

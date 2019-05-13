@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.item_borrow_list.view.*
 import kotlinx.android.synthetic.main.item_borrow_list.view.textView12
 import kotlinx.android.synthetic.main.item_borrow_list.view.textView4
-import kotlinx.android.synthetic.main.item_borrow_list.view.textView5
 import kotlinx.android.synthetic.main.item_borrow_list.view.textView7
 import kotlinx.android.synthetic.main.item_borrow_list.view.textView9
 import kotlinx.android.synthetic.main.item_main_borrowlist.view.*
@@ -81,8 +80,8 @@ class BorrowlistAdapter(val context: Context,
     override fun onBindViewHolder(p0: BorrowlistHolder, p1: Int) {
         p0.br_no .text = items[p1].br_no
         p0.ps_name .text = items[p1].ps_fname+" "+items[p1].ps_lname
-        p0.br_date .text = items[p1].br_date.take(10)+"  ถึง "
-        p0.br_check_date .text = items[p1].br_check_date.take(10)
+        p0.br_date .text = items[p1].br_date.take(10)
+        p0.checkdate .text = items[p1].br_check_date.take(10)
         p0.brst_name .text = items[p1].brst_name
 
     }
@@ -91,11 +90,11 @@ class BorrowlistAdapter(val context: Context,
 class BorrowlistHolder (view: View) : RecyclerView.ViewHolder(view) {
     val br_no = view.textView7
     val ps_name = view.textView9
-    val br_check_date = view.textView5
     val br_date = view.textView4
     val brst_name = view.textView12
+    val checkdate = view.checkdat
 
-}
+ }
 
 
 
