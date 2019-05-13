@@ -95,4 +95,21 @@ class Approve : AppCompatActivity() {
     }
 
 
+    fun update1(callback: VolleyCallback){
+        val url = "http://10.80.84.85:8218/update_borrow_approve"
+        val jsonBody = JSONObject()
+        jsonBody.put("br_no",br_no)
+        val stringRequest = JsonObjectRequest(
+            Request.Method.PUT, url,jsonBody,
+            Response.Listener<JSONObject> { response ->
+                //val accounting = JSONArray(response)
+                callback.onSuccess(response)
+            },
+            Response.ErrorListener {
+                    response-> Toast.makeText(this, "${response}", Toast.LENGTH_SHORT).show()
+            }
+        )
+    }
+
+
 }
