@@ -16,7 +16,7 @@ tools:context=".NotApprove">
     <TextView
             android:layout_marginTop="20dp"
 
-            android:text="เหตุผลที่ไม่อนุมัติ"
+            android:text="เหตุผลที่ไม่อนุมัติใบเลขที่"
             android:textColor="#000000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,6 +24,7 @@ tools:context=".NotApprove">
             android:textSize="24dp"
             android:layout_marginLeft="5dp"
     />
+
     <EditText
             android:background="@android:color/white"
             android:layout_marginTop="60dp"
@@ -32,7 +33,7 @@ tools:context=".NotApprove">
             android:layout_toRightOf="@id/reason"
             android:inputType="textPersonName"
             android:id="@+id/editText_reason"
-            android:layout_marginLeft="-152dp"/>
+            android:layout_marginLeft="-250dp"/>
     <Button
             android:text="ยืนยัน"
             android:textColor="#FFFFFF"
@@ -40,12 +41,25 @@ tools:context=".NotApprove">
             android:textSize="24sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/btnapprove"
-            android:layout_alignParentBottom="true"
+             android:layout_alignParentBottom="true"
             android:id="@+id/btnnotapprove"
             tools:layout_editor_absoluteY="557dp"
             tools:layout_editor_absoluteX="210dp"
     />
+    <TextView
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="24dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="38dp"
+            android:id="@+id/br_no"
+            android:layout_marginTop="21dp"
+            android:layout_marginRight="38dp"/>
 
 </RelativeLayout>
 

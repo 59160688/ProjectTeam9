@@ -8,12 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.item_borrow_list.view.*
-import kotlinx.android.synthetic.main.item_borrow_list.view.textView12
-import kotlinx.android.synthetic.main.item_borrow_list.view.textView4
-import kotlinx.android.synthetic.main.item_borrow_list.view.textView5
-import kotlinx.android.synthetic.main.item_borrow_list.view.textView7
-import kotlinx.android.synthetic.main.item_borrow_list.view.textView9
-import kotlinx.android.synthetic.main.item_main_borrowlist.view.*
 
 class RecycleAdapter(val context: Context,
                      val items : ArrayList<Borrowlists>
@@ -26,25 +20,7 @@ class RecycleAdapter(val context: Context,
     // Inflates the item views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         //var mView = LayoutInflater.from(context).inflate(R.layout.item, parent, false)
-        var mView = LayoutInflater.from(context).inflate(R.layout.item, parent, false)
-        var btn_detail = mView.btndetail
-        var mViewHolder = ViewHolder(mView)
-        btn_detail.setOnClickListener {
-
-            var selectItem = mViewHolder.layoutPosition
-            var intent_Detail = Intent(context, Detail::class.java)
-            intent_Detail.putExtra("br_no", items[selectItem].br_no)
-            intent_Detail.putExtra("ps_fname", items[selectItem].ps_fname)
-            intent_Detail.putExtra("ps_lname", items[selectItem].ps_lname)
-            intent_Detail.putExtra("br_date", items[selectItem].br_date)
-            intent_Detail.putExtra("br_check_date", items[selectItem].br_check_date)
-            intent_Detail.putExtra("eqs_code_old", items[selectItem].eqs_code_old)
-            intent_Detail.putExtra("eqs_name", items[selectItem].eqs_name)
-            intent_Detail.putExtra("brst_name", items[selectItem].brst_name)
-
-            context.startActivity(intent_Detail)
-        }
-        return mViewHolder
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_borrow_list, parent, false))
     }
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
