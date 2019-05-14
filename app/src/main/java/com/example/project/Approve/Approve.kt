@@ -96,7 +96,7 @@ class Approve : AppCompatActivity() {
 
 
     fun update(br_no: TextView?,callback: VolleyCallback){
-        val url = "http://10.80.84.85:8218/update_borrow_approve"
+        val url = "http://10.80.79.182:8218/update_borrow_approve"
         val jsonBody = JSONObject()
         jsonBody.put("br_no",br_no!!.text)
         val stringRequest = JsonObjectRequest(

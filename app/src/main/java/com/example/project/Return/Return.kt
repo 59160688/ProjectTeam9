@@ -5,27 +5,28 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.Response
+import com.android.volley.toolbox.*
+import org.json.JSONObject
 
 class Return : AppCompatActivity() {
+
     private var br_no: TextView? = null
     private var ps_fname: TextView? = null
     private var brst_name: TextView? = null
     private var eqs_code_old: TextView? = null
     private var eqs_name: TextView? = null
-    private var br_date : TextView? = null
+     private var br_date : TextView? = null
     private var br_check_date : TextView? = null
     private var btnapprove: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_return)
-        btnapprove = findViewById(R.id.btnapprove) as Button
-        btnapprove!!.setOnClickListener {
-            val intent = Intent(this, Returnchoosename::class.java)
-            startActivity(intent)
-        }
-
-        br_no =findViewById(R.id.id_ans) as TextView
+         br_no =findViewById(R.id.id_ans) as TextView
         ps_fname = findViewById(R.id.name_ans) as TextView
         brst_name = findViewById(R.id.status_ans) as TextView
         eqs_code_old = findViewById(R.id.AstId_ans) as TextView
@@ -42,6 +43,23 @@ class Return : AppCompatActivity() {
         eqs_code_old!!.setText(intent.getStringExtra("eqs_code_old"))
         br_date!!.setText(intent.getStringExtra("br_date"))
         br_check_date!!.setText(intent.getStringExtra("br_check_date"))
+
+
+
+//        btnreturn!!.setOnClickListener {
+//            val intent = Intent(this, Returnchoosename::class.java)
+//            intent .putExtra("br_no",br_no!!.text.toString())
+//            startActivity(intent)
+//        }
+        btnapprove = findViewById(R.id.btnapprove) as Button
+        btnapprove!!.setOnClickListener {
+            val intent = Intent(this, Returnchoosename::class.java)
+            intent .putExtra("br_no",br_no!!.text.toString())
+            startActivity(intent)
+        }
+
+
+
     }
 
 //    private var btnapprove: Button? = null
