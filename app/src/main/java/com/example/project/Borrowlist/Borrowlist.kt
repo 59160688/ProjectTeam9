@@ -69,7 +69,7 @@ class Borrowlist : AppCompatActivity() {
             start()
         }
 
-        val url = "http://10.80.84.85:8218/get_all"
+        val url = "http://10.80.79.182:8218/get_all"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String>
@@ -86,8 +86,8 @@ class Borrowlist : AppCompatActivity() {
                         json.getJSONObject(it).getString("br_date"),
                         json.getJSONObject(it).getString("br_check_date"),
                         json.getJSONObject(it).getString("brst_name"),
-                        json.getJSONObject(it).getString("eqs_code_old"),
-                        json.getJSONObject(it).getString("eqs_name"))
+                        json.getJSONObject(it).getString("eqs_name"),
+                        json.getJSONObject(it).getString("eqs_code_old"))
 
                 }
 
