@@ -77,8 +77,8 @@ class Approve : AppCompatActivity() {
 
             toast.show()
 
-//            val intent = Intent(this, Borrowlist::class.java)
-//            startActivity(intent)
+            val intent = Intent(this, Borrowlist::class.java)
+            startActivity(intent)
 
         }
         btn_notapprove = findViewById(R.id.btnnotapprove) as Button
