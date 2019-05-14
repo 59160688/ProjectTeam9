@@ -33,7 +33,7 @@ class MainHistory : AppCompatActivity() {
             start()
         }
 
-        val url = "http://10.80.79.182:8218/get_all"
+        val url = "http://10.70.20.169:8218/getall"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String>

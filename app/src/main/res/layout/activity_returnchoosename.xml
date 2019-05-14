@@ -36,9 +36,10 @@
                 android:layout_marginRight="10dp"
                  android:layout_alignBottom="@+id/list1"/>
         <TextView
-                android:textColor="@android:color/black"
+                android:textColor="#3F51B5"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="22dp"
+
                 android:text="xxxx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -66,7 +67,7 @@
             android:background="@android:color/white"
             android:layout_marginTop="70dp"
             android:layout_toRightOf="@+id/textname"
-            android:layout_width="240dp"
+            android:layout_width="200dp"
             android:layout_marginLeft="26dp"
 
             android:layout_height="40dp"

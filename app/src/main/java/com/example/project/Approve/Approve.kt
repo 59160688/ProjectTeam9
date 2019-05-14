@@ -76,9 +76,13 @@ class Approve : AppCompatActivity() {
             val toast = Toast.makeText(this, "update1", Toast.LENGTH_LONG)
 
             toast.show()
-
-            val intent = Intent(this, Borrowlist::class.java)
-            startActivity(intent)
+//            finish();
+//            startActivity(getIntent())
+     val intent = Intent(this, Borrowlist::class.java)
+             overridePendingTransition(0, 0);
+            startActivity(intent);
+//            val intent = Intent(this, Borrowlist::class.java)
+//            startActivity(intent)
 
         }
         btn_notapprove = findViewById(R.id.btnnotapprove) as Button
@@ -97,7 +101,7 @@ class Approve : AppCompatActivity() {
 
 
     fun update(br_no: TextView?,callback: VolleyCallback){
-        val url = "http://10.80.79.182:8218/update_borrow_approve"
+        val url = "http://10.70.20.169:8218/update_borrow_approve"
         val jsonBody = JSONObject()
         jsonBody.put("br_no",br_no!!.text)
         val stringRequest = JsonObjectRequest(

@@ -51,14 +51,17 @@ class Returnchoosename : AppCompatActivity() {
                 }
 
             })
+//            val intent = Intent(this, Borrowlist::class.java)
+//            startActivity(intent)
             val intent = Intent(this, Borrowlist::class.java)
-            startActivity(intent)
+            overridePendingTransition(0, 0);
+            startActivity(intent);
 
         }
     }
 
     fun update(br_no: TextView?,br_cm_no_allowed: TextView?,callback: VolleyCallback){
-        val url = "http://10.80.79.182:8218/update_borrow_return"
+        val url = "http://10.70.20.169:8218/update_borrow_return"
         val jsonBody = JSONObject()
         jsonBody.put("br_no",br_no!!.text)
         jsonBody.put("br_cm_no_allowed",br_cm_no_allowed!!.text)

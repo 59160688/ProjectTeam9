@@ -6,13 +6,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Approve">
+
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteX="16dp"
-            android:background="#EAEAEA  "
     >
-
 
         <TextView
                 android:text="เลขที่ใบยืม"
@@ -20,18 +19,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/id"
-                android:textSize="24dp"
-                android:layout_marginLeft="5dp"
+                android:textSize="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"
         />
         <TextView
                 android:text="xx"
-                android:textColor="#3F51B5"
+                android:textColor="#FF3F51B5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/id_ans"
                 android:layout_toRightOf="@id/id"
-                android:layout_marginLeft="92dp"
-                android:textSize="24dp"
+                android:layout_marginLeft="75dp"
+                android:textSize="18dp"
+                android:layout_marginBottom="20dp"
         />
 
         <TextView
@@ -41,7 +42,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/name"
-                android:textSize="24dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="22dp"
+                android:layout_marginBottom="15dp"
         />
         <TextView
                 android:text="xxxxxx xxxxxxx"
@@ -50,10 +53,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/name_ans"
                 android:layout_toRightOf="@id/name"
-                android:layout_marginLeft="48dp"
-                android:textSize="24dp"
-                android:layout_marginTop="35dp"
-
+                android:layout_marginLeft="108dp"
+                android:textSize="18dp"
+                android:layout_below="@+id/id_ans"
+                android:layout_marginBottom="30dp"
         />
         <TextView
                 android:text="วันที่ยืม "
@@ -62,8 +65,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/date_borrow"
-                android:textSize="24dp"
-                android:layout_marginLeft="5dp"/>
+                android:textSize="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"/>
         <TextView
                 android:text="xx / xx / xxxx"
                 android:textColor="#000000"
@@ -71,20 +75,20 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/date_borrow_ans"
                 android:layout_toRightOf="@id/date_borrow"
-                android:layout_marginLeft="40dp"
-                android:textSize="24dp"
-                android:layout_marginTop="65dp"
-
-        />
+                android:layout_marginLeft="105dp"
+                android:textSize="18dp"
+                android:layout_marginTop="95dp"
+                android:layout_marginBottom="20dp"/>
         <TextView
-                android:text="วันที่คืน "
+                android:text="วันที่ยืม "
                 android:textColor="#000000"
                 android:layout_below="@id/date_borrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/date_return"
-                android:textSize="24dp"
-                android:layout_marginLeft="5dp"/>
+                android:textSize="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"/>
         <TextView
                 android:text="xx / xx / xxxx"
                 android:textColor="#000000"
@@ -92,10 +96,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/date_return_ans"
                 android:layout_toRightOf="@id/date_return"
-                android:layout_marginLeft="39dp"
-                android:textSize="24dp"
-                android:layout_marginTop="95dp"
-
+                android:layout_marginLeft="105dp"
+                android:textSize="18dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginBottom="15dp"
         />
         <TextView
                 android:text="สถานะ"
@@ -104,8 +108,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/status"
-                android:textSize="24dp"
-                android:layout_marginLeft="5dp"/>
+                android:textSize="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"/>
         <TextView
                 android:text="xxxxxx"
                 android:textColor="#000000"
@@ -113,11 +118,12 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/status_ans"
                 android:layout_toRightOf="@id/status"
-                android:layout_marginLeft="49dp"
-                android:textSize="24dp"
-                android:layout_marginTop="130dp"
-
+                android:layout_marginLeft="115dp"
+                android:textSize="18dp"
+                android:layout_marginTop="185dp"
+                android:layout_marginBottom="15dp"
         />
+
 
         <TextView
                 android:text="ครุภัณฑ์ที่ขอใช้"
@@ -125,74 +131,74 @@
                 android:layout_below="@id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/AstBrw"
-                android:textSize="24dp"
-                android:layout_marginLeft="5dp"/>
+                android:id="@+id/eqs_topic"
+                android:textSize="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"/>
 
-        <TextView
-                android:textColor="#000000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/AstBrw_ans"
-                android:layout_toRightOf="@id/AstBrw"
-                android:layout_marginLeft="26dp"
-                android:textSize="24dp"
-                android:layout_marginTop="160dp"
 
-        />
+
+
         <TextView
                 android:text="เลขที่ครุภัณฑ์"
                 android:textColor="#000000"
-                android:layout_below="@id/AstBrw"
-
+                android:layout_below="@id/eqs_topic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/AstId"
-                android:textSize="24dp"
-                android:layout_marginLeft="5dp"/>
+                android:textSize="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"/>
+
+
         <TextView
+                android:text="xxxxx"
                 android:textColor="#000000"
                 android:layout_width="wrap_content"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/AstId_ans"
                 android:layout_toRightOf="@id/AstId"
-                android:layout_marginLeft="4dp"
-                android:textSize="24dp"
-                android:layout_marginTop="195dp"
+                android:layout_marginLeft="45dp"
+                android:textSize="18dp"
+                android:layout_marginBottom="15dp"
+                android:layout_below="@+id/status_ans"
+                android:layout_marginTop="96dp"
 
         />
+
         <TextView
                 android:text="ชื่อครุภัณฑ์"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/Astname"
-                android:textSize="24dp"
-                android:textColor="#000000"
-                android:layout_below="@id/AstId"
-                android:layout_marginTop="36dp"
-                android:layout_alignEnd="@+id/id"
-                android:layout_marginEnd="0dp"/>
-        <TextView
-                android:text="ชื่อครุภัณฑ์"
+                android:layout_marginTop="96dp"
+                android:layout_below="@+id/status_ans"
 
+                android:textSize="22dp"
+                android:textColor="#000000"
+                 android:layout_marginLeft="20dp"
+                android:layout_marginBottom="15dp"
+        />
+
+
+        <TextView
+                android:text="xxxxxxx"
                 android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/Astname_ans"
-                android:layout_toRightOf="@id/AstBrw"
-                android:layout_marginLeft="-4dp"
-                android:textSize="24dp"
-
-                android:layout_marginTop="265dp"
-
-        />
-
+                android:layout_below="@id/eqs_topic"
+                android:layout_toRightOf="@id/AstId"
+                android:layout_marginLeft="45dp"
+                android:textSize="18dp"
+                android:layout_marginBottom="15dp"
+         />
         <Button
-                android:text="อนุมัติการ"
+                android:text="อนุมัติการยืม"
                 android:textColor="#FFFFFF"
                 android:background="#4CAF50"
                 android:textSize="24sp"
-                android:layout_width="210dp"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:id="@+id/btnapprove"
