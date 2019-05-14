@@ -86,8 +86,8 @@ class Borrowlist : AppCompatActivity() {
                         json.getJSONObject(it).getString("br_date"),
                         json.getJSONObject(it).getString("br_check_date"),
                         json.getJSONObject(it).getString("brst_name"),
-                        json.getJSONObject(it).getString("eqs_code_old"),
-                        json.getJSONObject(it).getString("eqs_name"))
+                        json.getJSONObject(it).getString("eqs_name"),
+                        json.getJSONObject(it).getString("eqs_code_old"))
 
                 }
 

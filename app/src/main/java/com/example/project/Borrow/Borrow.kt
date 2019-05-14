@@ -14,7 +14,7 @@ class Borrow : AppCompatActivity() {
         setContentView(R.layout.activity_borrow)
         btnchooseformat = findViewById(R.id.btnchooseformat) as Button
         btnchooseformat!!.setOnClickListener {
-            val intent = Intent(this, Chooseformat::class.java)
+            val intent = Intent(this, Chooseformat_user::class.java)
             startActivity(intent)
 
         }

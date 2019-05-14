@@ -42,7 +42,8 @@ class Chooseformat_user : AppCompatActivity() {
                 val json = JSONArray(response)
                 (0 until json.length()).mapTo(List) {
                     Chooseformat_user_data(
-                        json.getJSONObject(it).getString("fmst_name"))
+                        json.getJSONObject(it).getString("fmst_name"),
+                        json.getJSONObject(it).getString("fmst_id"))
                 }
 
                 item_list.layoutManager = LinearLayoutManager(this)
