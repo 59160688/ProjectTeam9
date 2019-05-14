@@ -15,23 +15,56 @@
         android:background="#EAEAEA  "
 >
 
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_alignBottom="@+id/layout1"
+            android:id="@+id/list1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EAEAEA  "
+            android:layout_marginBottom="-83dp">
+        <TextView
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="24dp"
+                android:text="เลขที่ใบยืม"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textlist1"
+                android:textSize="24dp"
+                android:layout_marginRight="10dp"
+                 android:layout_alignBottom="@+id/list1"/>
+        <TextView
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="22dp"
+                android:text="xxxx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/br_no"
+                android:textSize="24dp"
+                android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
     <TextView
             android:id="@+id/textname"
             android:textColor="#000000"
 
             android:text="ใส่ชื่อผู้คืน"
-             android:textSize="24sp"
+            android:textSize="24sp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_alignParentLeft="true" android:layout_marginLeft="0dp">
+            android:layout_marginTop="70dp"
+            android:layout_alignParentLeft="true" android:layout_marginLeft="17dp">
 
 
     </TextView>
 
     <EditText
             android:background="@android:color/white"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="70dp"
             android:layout_toRightOf="@+id/textname"
             android:layout_width="240dp"
             android:layout_marginLeft="26dp"
@@ -61,7 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:id="@+id/btnapprove"
+            android:id="@+id/btnconre"
             tools:layout_editor_absoluteY="553dp"
             tools:layout_editor_absoluteX="0dp"
     />
