@@ -27,6 +27,7 @@ import java.util.*
 
 class Borrowlist : AppCompatActivity() {
     private var gotoborrow: Button? = null
+    private var back: Button? = null
     private var btnreturn: Button? = null
     private var btnapprove: Button? = null
     private var btndetail: Button? = null
@@ -37,10 +38,15 @@ class Borrowlist : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_borrowlist)
         gotoborrow = findViewById(R.id.btnborrow) as Button
+        back = findViewById(R.id.back) as Button
         gotoborrow!!.setOnClickListener {
             val intent = Intent(this, Borrow::class.java)
             startActivity(intent)
 
+        }
+        back!!.setOnClickListener {
+            val intent = Intent(this, Menuoffice::class.java)
+            startActivity(intent)
         }
 //        btnreturn = findViewById(R.id.btnreturn) as Button
 //        btnreturn!!.setOnClickListener {
@@ -69,7 +75,7 @@ class Borrowlist : AppCompatActivity() {
             start()
         }
 
-        val url = "http://10.80.79.182:8218/get_all"
+        val url = "http://10.70.20.169:8218/get_all"
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             Response.Listener<String>

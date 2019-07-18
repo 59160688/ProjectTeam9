@@ -26,8 +26,8 @@
                     android:background="#EAEAEA  "
                     android:layout_marginBottom="-83dp">
                 <TextView
-                        android:text="เลขที่ใบยืม : "
-                        android:layout_width="36dp"
+                        android:text="เลขที่ : "
+                        android:layout_width="wrap_content"
                         android:textColor="#000000"
                         android:textSize="20sp"
                         android:layout_height="match_parent"
@@ -35,6 +35,7 @@
                         android:layout_weight="1"/>
                 <TextView
                         android:textSize="20sp"
+                        android:textColor="#3F51B5"
 
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -132,20 +133,27 @@
             >
                 <Button
                         android:text="ดูข้อมูล"
+                        android:textSize="18sp"
+                        android:textColor="#FFFFFF"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/btn_detail"
                         android:layout_weight="1"
                         android:background="#3F51B5"/>
                 <Button
-                        android:text="อนุมัติ"
+                        android:text="อนุมัติการยืม"
+                        android:textSize="18sp"
+                        android:textColor="#FFFFFF"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/btnapprove"
                         android:layout_weight="1"
                         android:background="#4CAF50"/>
                 <Button
-                        android:text="คืน"
+                        android:text="อนุมัติการคืน"
+                        android:textSize="18sp"
+                        android:textColor="#FFFFFF"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/btnreturn"

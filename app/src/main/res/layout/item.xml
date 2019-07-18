@@ -6,7 +6,7 @@
 >
 
     <RelativeLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
     >
@@ -24,7 +24,7 @@
                     android:background="#EAEAEA  "
                     android:layout_marginBottom="-83dp">
                 <TextView
-                        android:text="เลขที่ใบยืม : "
+                        android:text="เลขที่ : "
                         android:layout_width="60dp"
                         android:textColor="#000000"
                         android:textSize="20sp"
@@ -33,7 +33,7 @@
                         android:layout_weight="1"/>
                 <TextView
                         android:textSize="20sp"
-
+                        android:textColor="#3F51B5"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:id="@+id/textView7"
@@ -42,7 +42,7 @@
 
                 <TextView
                         android:text="ชื่อผู้ยืม : "
-                        android:layout_width="wrap_content"
+                        android:layout_width="50dp"
                         android:textColor="#000000"
                         android:textSize="20sp"
 
@@ -121,6 +121,7 @@
                         android:textSize="20sp"
                         android:id="@+id/textView12"
                         android:layout_weight="1"/>
+
             </LinearLayout>
             <LinearLayout
                     android:layout_width="match_parent"
@@ -130,11 +131,12 @@
             >
                 <Button
                         android:text="ดูข้อมูล"
-                        android:layout_width="100dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/btndetail"
                         android:background="#3F51B5"
-                        android:layout_marginLeft="270dp"
+                        android:textSize="20sp"
+                        android:textColor="#D5D5D5"
                 />
             </LinearLayout>
         </LinearLayout>

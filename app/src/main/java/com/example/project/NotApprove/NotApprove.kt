@@ -17,6 +17,7 @@ class NotApprove : AppCompatActivity() {
     private var requestQueue: RequestQueue? = null
     private var btnnotapprove: Button? = null
     private var br_no: TextView? = null
+    private var br_cm_no_allowed:EditText? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +25,7 @@ class NotApprove : AppCompatActivity() {
 
         br_no = findViewById(R.id.br_no) as TextView
 
+        br_cm_no_allowed = findViewById(R.id.editText_Name)as EditText
         var intent = getIntent()
         br_no!!.setText(intent.getStringExtra("br_no"))
 
@@ -39,7 +41,7 @@ class NotApprove : AppCompatActivity() {
         btnnotapprove = findViewById(R.id.btnnotapprove) as Button
 
         btnnotapprove!!.setOnClickListener {
-            update(br_no,object : VolleyCallback{
+            update(br_no,br_cm_no_allowed,object :VolleyCallback{
                 override fun onSuccess(result: String) {
                     TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
                 }
@@ -58,10 +60,11 @@ class NotApprove : AppCompatActivity() {
 
 
     }
-    private fun update(br_no: TextView?, callback: VolleyCallback){
-        val url = "http://10.80.79.182:8218/update_borrow_not_approve"
+    private fun update(br_no: TextView?,br_cm_no_allowed: EditText?,callback: VolleyCallback){
+        val url = "http://10.70.20.169:8218/update_borrow_not_approve"
         val jsonBody = JSONObject()
         jsonBody.put("br_no",br_no!!.text)
+        jsonBody.put("br_cm_no_allowed",br_cm_no_allowed!!.text)
 
         val stringRequest = JsonObjectRequest(
             Request.Method.PUT, url,jsonBody,

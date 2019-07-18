@@ -9,6 +9,8 @@
 >
     <TextView
             android:id="@+id/text"
+            android:textColor="#FFFFFF"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ผู้ใช้ทั่วไป"
@@ -39,6 +41,9 @@
             android:layout_width="177dp"
             android:layout_height="64dp"
             android:text="ขอใช้ครุภัณฑ์  "
+            android:background="#009688"
+            android:textColor="#FFFFFF"
+
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
